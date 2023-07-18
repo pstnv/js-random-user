@@ -57,14 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const usersCount = parseInt(this.getAttribute('usersCount'));
 
         const randomUserId = Math.floor(Math.random() * usersCount) + 1;
-        console.log(randomUserId);
         getInfo(`${url}/${randomUserId}`, onGetUserInfoCallback);
     })
 });
 
 function renderUserInfo(user) {
+    showTemplate(card);
     userTemplate(user);
 };
+
+function showTemplate(card) {
+    const cardData = card.querySelector('.card-data');
+    if (cardData.classList.contains('invisible')) {
+        cardData.classList.remove('invisible');
+    }
+}
 
 function userTemplate({ firstName, lastName, age, birthDate, gender, email, image, company: { name } }) {
     const userImage = card.querySelector('.card-img-top');
@@ -78,7 +85,7 @@ function userTemplate({ firstName, lastName, age, birthDate, gender, email, imag
     cardTitle.innerText = `${firstName} ${lastName}, ${age}`;
     userBirthdate.innerText = `${birthDate}`;
     userGender.innerText = `${gender}`;
-    userName.innerText = `${name}`;
+    userCompany.innerText = `${name}`;
     userEmail.href = `mailto:${email}`;
     userEmail.innerText = `${email}`;
 };

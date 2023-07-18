@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background-color: azure;
+}
+* {
+    box-sizing: border-box;
+}
+.container {    
+    min-height: 100vh;
+}
+.card {
+    min-height: 650px;
+    padding: .5rem;
+    background-color: rgb(255, 255, 255, 0.7);
+}
+.card-img-top {
+    display: block;
+    max-width: 70%;
+}
+
+@media all and (max-width: 400px) {
+    .card {
+        min-height: 470px;
+        font-size: 15px;
+    }
+    .card-title {
+        font-size: 18px;
+    }
+    .btn {
+        font-size: 15px;
+    }
+}
