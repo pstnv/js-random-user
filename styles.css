@@ -9,18 +9,18 @@ body {
     min-height: 100vh;
 }
 .card {
-    min-height: 650px;
+    min-height: 600px;
     padding: .5rem;
     background-color: rgb(255, 255, 255, 0.7);
 }
 .card-img-top {
     display: block;
-    max-width: 70%;
+    max-width: 60%;
 }
 
 @media all and (max-width: 400px) {
     .card {
-        min-height: 470px;
+        min-height: 530px;
         font-size: 15px;
     }
     .card-title {
